@@ -1,0 +1,132 @@
+<head>
+  <title>pokemon-go-evolution</title>
+  <link rel="stylesheet" type="text/css" href="pokemon-go-evolution-new.css">
+  <style>
+  div {
+    display: block;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Optimize Pokemon GO Evolutions!</h1>
+  <p>
+    This tool will show the total number of evolutions you can carry out with the number of Pokemon and candies you currently have. Useful for power evolving!
+    Enter all the relevant information in the boxes on the left, then click the "Calculate" button.
+  </p>
+  <p>
+    Remember, evolutions give one candy back: this calculator will tell you to perform enough evolutions to receive enough candy for another evolution if you have enough (i.e. 12 pidgey evolutions will give enough for another evolution, without the need to transfer any first).
+  </p>
+
+    <div>
+
+      <div>
+        <!-- first column -->
+        <!-- No header -->
+        <div> Pokemon that need 12 candies: </div>
+
+        <br>
+        
+        <div class="pokemon">
+          Caterpie #:<input type="number" class="col1" id="caterpie_num" value="0">
+          Candies:   <input type="number" class="col1" id="caterpie_candies" value="0">
+          Weedle #:<input type="number" class="col1" id="weedle_num" value="0">
+          Candies: <input type="number" class="col1" id="weedle_candies" value="0">
+          Pidgey #:<input type="number" class="col1" id="pidgey_num" value="0">
+          Candies: <input type="number" class="col1" id="pidgey_candies" value="0">
+        </div>
+        
+        <br>
+
+        <div> Pokemon that need 25 candies: </div>
+
+        <br>
+        
+        <div class="pokemon">
+          Rattata #:<input type="number" class="col1" id="rattata_num" value="0">
+          Candies:  <input type="number" class="col1" id="rattata_candies" value="0">
+          Eevee #:<input type="number" class="col1" id="eevee_num" value="0">
+          Candies:<input type="number" class="col1" id="eevee_candies" value="0">
+        </div>
+
+        <br>
+
+        <div> Pokemon that need 50 candies: </div>
+
+        <br>
+
+        <div class="pokemon">
+          Spearow #:<input type="number" class="col1" id="spearow_num" value="0">
+          Candies:  <input type="number" class="col1" id="spearow_candies" value="0">
+          Zubat #:<input type="number" class="col1" id="zubat_num" value="0">
+          Candies:<input type="number" class="col1" id="zubat_candies" value="0">
+          Venonat #:<input type="number" class="col1" id="venonat_num" value="0">
+          Candies:  <input type="number" class="col1" id="venonat_candies" value="0">
+        </div>
+        
+      </div>
+
+        <div>
+          <!-- second column -->
+          <div class="col">How Many to Transfer</div>
+          <div class="col" id="caterpie_transfer"></div>
+          <div class="col" id="weedle_transfer"></div>
+          <div class="col" id="pidgey_transfer"></div>
+          <div class="col" id="rattata_transfer"></div>
+          <div class="col" id="eevee_transfer"></div>
+          <div class="col" id="spearow_transfer"></div>
+          <div class="col" id="zubat_transfer"></div>
+          <div class="col" id="venonat_transfer"></div>
+        </div>
+
+        <div>
+          <!-- third column -->
+          <div class="col">How Many to Evolve</div>
+          <div class="col" id="caterpie_evo"></div>
+          <div class="col" id="weedle_evo"></div>
+          <div class="col" id="pidgey_evo"></div>
+          <div class="col" id="rattata_evo"></div>
+          <div class="col" id="eevee_evo"></div>
+          <div class="col" id="spearow_evo"></div>
+          <div class="col" id="zubat_evo"></div>
+          <div class="col" id="venonat_evo"></div>
+        </div>
+
+      <div>
+        <!-- fourth column -->
+        <div class="col">Remainder of Pokemon</div>
+        <div class="col" id="caterpie_remp"></div>
+        <div class="col" id="weedle_remp"></div>
+        <div class="col" id="pidgey_remp"></div>
+        <div class="col" id="rattata_remp"></div>
+        <div class="col" id="eevee_remp"></div>
+        <div class="col" id="spearow_remp"></div>
+        <div class="col" id="zubat_remp"></div>
+        <div class="col" id="venonat_remp"></div>
+      </div>
+
+      <div>
+        <!-- fifth column -->
+        <div class="col">Remainder of Candies</div>
+        <div class="col" id="caterpie_remc"></div>
+        <div class="col" id="weedle_remc"></div>
+        <div class="col" id="pidgey_remc"></div>
+        <div class="col" id="rattata_remc"></div>
+        <div class="col" id="eevee_remc"></div>
+        <div class="col" id="spearow_remc"></div>
+        <div class="col" id="zubat_remc"></div>
+        <div class="col" id="venonat_remc"></div>
+      </div>
+
+      <br>
+
+
+
+    </div>
+
+  <br>
+
+  <button onClick="FillOut()">Calculate</button>
+  <script src="pokemon-go-evolution-new.js"></script>
+
+</body>
