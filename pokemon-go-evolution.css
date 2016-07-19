@@ -1,28 +1,69 @@
 /* CSS declarations go here */
-.pokemon {
-    /*width: 100px;*/
-    display: table;
-    width: 100%; /*Optional*/
-/*    -webkit-column-width: 100px;
-    -moz-column-width: 100px;
-    column-width: 100px;
-*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-    text-align: center;
-}
-.row {
-    /*width: 100px;*/
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-    text-align: center;
-}
-.col {
-    display: table-cell;
-    background-color: lightgreen;
+
+body {
+    background-color: #52a4ff;
 }
 
-.col1 {
+.label {
+    width: 100px;
+}
+
+#table {
+    width: 1400px;
+}
+
+.row {
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input {
+    width: 80px;
+    height: 34px;
+    background-color: lightgreen;
+    transition: box-shadow .25s;
+    border-radius: 7px;
+    padding: 0 5px;
+    border-color: #3b5998;
+    border-style: solid;
+    box-shadow: 0 0 5px lightgreen;
+}
+
+.output {
+    background-color: lightgreen;
+    border-radius: 7px;
+    padding: 0 10px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.row-div {
+    display: inline-block;
+}
+
+.header {
+    display: inline;
+}
+
+#headers {
+    width: 1000px;
+    position: relative;
+    left: 400px;
+}
+
+.output-1 {
+    margin: 0 90px;
+}
+
+.output-2 {
+    margin: 0 65px;
+}
+
+.output-3 {
+    margin: 0 80px;
+}
+
+.output-4 {
+    margin: 0 70px;
 }

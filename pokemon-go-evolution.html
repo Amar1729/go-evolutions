@@ -1,137 +1,114 @@
 <head>
+  <meta charset="utf-8">
   <title>pokemon-go-evolution</title>
-
-
-  <link rel="icon" href="pokeball.png">
-
   <link rel="stylesheet" type="text/css" href="pokemon-go-evolution.css">
-
-  <style>
-  div {
-    display: block;
-  }
-  </style>
 </head>
 
 <body>
   <h1>Optimize Pokemon GO Evolutions!</h1>
   <p>
-    This tool will show the total number of evolutions you can carry out with the number of Pokemon and candies you currently have. Useful for power evolving!
-    Enter all the relevant information in the boxes on the left, then click the "Calculate" button.
+  This tool will show the total number of evolutions you can carry out with the number of Pokemon and candies you currently have. Useful for power evolving!
+  Enter all the relevant information in the boxes on the left, then click the "Calculate" button.
   </p>
   <p>
-    Remember, evolutions give one candy back: this calculator will tell you to perform enough evolutions to receive enough candy for another evolution if you have enough (i.e. 12 pidgey evolutions will give enough for another evolution, without the need to transfer any first).
+  Remember, evolutions give one candy back: this calculator will tell you to perform enough evolutions to receive enough candy for another evolution if you have enough (i.e. 12 pidgey evolutions will give enough for another evolution, without the need to transfer any first).
   </p>
-
-    <div>
-
-      <div class="row">
-      <!--
-        <div class="col">Pokemon</div>
-        <div class="col">Number of Pokemon</div>
-        <div class="col">Number of Candies</div>
-      -->
-        <div class="col">How Many to Transfer</div>
-        <div class="col">How Many to Evolve</div>
-        <div class="col">Remainder of Pokemon</div>
-        <div class="col">Remainder of Candies</div>
-      </div>
-
-      <br>
-
-      <div> Pokemon that need 12 candies: </div>
-
-      <br>
-      
-      <div class="pokemon">
-        Caterpie #:<input type="number" class="col1" id="caterpie_num" value="0">
-        Candies:   <input type="number" class="col1" id="caterpie_candies" value="0">
-        <div class="col" id="caterpie_transfer"></div>
-        <div class="col" id="caterpie_evo"></div>
-        <div class="col" id="caterpie_remp"></div>
-        <div class="col" id="caterpie_remc"></div>
-      </div>
-      
-      <div class="pokemon">
-        Weedle #:<input type="number" class="col1" id="weedle_num" value="0">
-        Candies: <input type="number" class="col1" id="weedle_candies" value="0">
-        <div class="col" id="weedle_transfer"></div>
-        <div class="col" id="weedle_evo"></div>
-        <div class="col" id="weedle_remp"></div>
-        <div class="col" id="weedle_remc"></div>
-      </div>
-
-      <div class="pokemon">
-        Pidgey #:<input type="number" class="col1" id="pidgey_num" value="0">
-        Candies: <input type="number" class="col1" id="pidgey_candies" value="0">
-        <div class="col" id="pidgey_transfer"></div>
-        <div class="col" id="pidgey_evo"></div>
-        <div class="col" id="pidgey_remp"></div>
-        <div class="col" id="pidgey_remc"></div>
-      </div>
-      
-      <br>
-
-      <div> Pokemon that need 25 candies: </div>
-
-      <br>
-      
-      <div class="pokemon">
-        Rattata #:<input type="number" class="col1" id="rattata_num" value="0">
-        Candies:  <input type="number" class="col1" id="rattata_candies" value="0">
-        <div class="col" id="rattata_transfer"></div>
-        <div class="col" id="rattata_evo"></div>
-        <div class="col" id="rattata_remp"></div>
-        <div class="col" id="rattata_remc"></div>
-      </div>
-      
-      <div class="pokemon">
-        Eevee #:<input type="number" class="col1" id="eevee_num" value="0">
-        Candies:<input type="number" class="col1" id="eevee_candies" value="0">
-        <div class="col" id="eevee_transfer"></div>
-        <div class="col" id="eevee_evo"></div>
-        <div class="col" id="eevee_remp"></div>
-        <div class="col" id="eevee_remc"></div>
-      </div>
-
-      <br>
-
-      <div> Pokemon that need 50 candies: </div>
-
-      <br>
-
-      <div class="pokemon">
-        Spearow #:<input type="number" class="col1" id="spearow_num" value="0">
-        Candies:  <input type="number" class="col1" id="spearow_candies" value="0">
-        <div class="col" id="spearow_transfer"></div>
-        <div class="col" id="spearow_evo"></div>
-        <div class="col" id="spearow_remp"></div>
-        <div class="col" id="spearow_remc"></div>
-      </div>
-      
-      <div class="pokemon">
-        Zubat #:<input type="number" class="col1" id="zubat_num" value="0">
-        Candies:<input type="number" class="col1" id="zubat_candies" value="0">
-        <div class="col" id="zubat_transfer"></div>
-        <div class="col" id="zubat_evo"></div>
-        <div class="col" id="zubat_remp"></div>
-        <div class="col" id="zubat_remc"></div>
-      </div>
-      
-      <div class="pokemon">
-        Venonat #:<input type="number" class="col1" id="venonat_num" value="0">
-        Candies:  <input type="number" class="col1" id="venonat_candies" value="0">
-        <div class="col" id="venonat_transfer"></div>
-        <div class="col" id="venonat_evo"></div>
-        <div class="col" id="venonat_remp"></div>
-        <div class="col" id="venonat_remc"></div>
-      </div>
-
+  <div id="table">
+    <div id="headers">
+      <h3 class="output header">How Many to Transfer</h3>
+      <h3 class="output header">How Many to Evolve</h3>
+      <h3 class="output header">Remainder of Pokemon</h3>
+      <h3 class="output header">Remainder of Candies</h3>
     </div>
-
-  <br>
-
-  <button onClick="FillOut()">Calculate</button>
+    <div id="sec-1">
+      <h3>Pokemon that need 12 candies:</h3>
+      <div class="row">
+        <div class="label row-div">Caterpie #:</div>
+        <input type="number" id="caterpie_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" id="caterpie_candies" value="0">
+        <div class="output output-1 row-div" id="caterpie_transfer">0</div>
+        <div class="output output-2 row-div" id="caterpie_evo">0</div>
+        <div class="output output-3 row-div" id="caterpie_remp">0</div>
+        <div class="output output-4 row-div" id="caterpie_remc">0</div>
+      </div></br>
+      <div class="row">
+        <div class="label row-div">Weedle #:</div>
+        <input type="number" id="weedle_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" id="weedle_candies" value="0">
+        <div class="output output-1 row-div" id="weedle_transfer">0</div>
+        <div class="output output-2 row-div" id="weedle_evo">0</div>
+        <div class="output output-3 row-div" id="weedle_remp">0</div>
+        <div class="output output-4 row-div" id="weedle_remc">0</div>
+      </div></br>
+      <div class="row">
+        <div class="label row-div">Pidgey #:</div>
+        <input type="number" id="pidgey_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" id="pidgey_candies" value="0">
+        <div class="output output-1 row-div" id="pidgey_transfer">0</div>
+        <div class="output output-2 row-div" id="pidgey_evo">0</div>
+        <div class="output output-3 row-div" id="pidgey_remp">0</div>
+        <div class="output output-4 row-div" id="pidgey_remc">0</div>
+      </div>
+    </div>
+    <div id="sec-2">
+      <h3> Pokemon that need 25 candies: </h3>
+      <div class="row">
+        <div class="label row-div">Rattata #:</div>
+        <input type="number" class="col1" id="rattata_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" class="col1" id="rattata_candies" value="0">
+        <div class="output output-1 row-div" id="rattata_transfer">0</div>
+        <div class="output output-2 row-div" id="rattata_evo">0</div>
+        <div class="output output-3 row-div" id="rattata_remp">0</div>
+        <div class="output output-4 row-div" id="rattata_remc">0</div>
+      </div></br>
+      <div class="row">
+        <div class="label row-div">Eevee #:</div>
+        <input type="number" class="col1" id="eevee_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" class="col1" id="eevee_candies" value="0">
+        <div class="output output-1 row-div" id="eevee_transfer">0</div>
+        <div class="output output-2 row-div" id="eevee_evo">0</div>
+        <div class="output output-3 row-div" id="eevee_remp">0</div>
+        <div class="output output-4 row-div" id="eevee_remc">0</div>
+      </div>
+    </div>
+    <div id="sec-3">
+      <h3> Pokemon that need 50 candies: </h3>
+      <div class="row">
+        <div class="label row-div">Spearow #:</div>
+        <input type="number" class="col1" id="spearow_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" class="col1" id="spearow_candies" value="0">
+        <div class="output output-1 row-div" id="spearow_transfer">0</div>
+        <div class="output output-2 row-div" id="spearow_evo">0</div>
+        <div class="output output-3 row-div" id="spearow_remp">0</div>
+        <div class="output output-4 row-div" id="spearow_remc">0</div>
+      </div>
+      <div>
+        <div class="label row-div">Zubat #:</div>
+        <input type="number" class="col1" id="zubat_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" class="col1" id="zubat_candies" value="0">
+        <div class="output output-1 row-div" id="zubat_transfer">0</div>
+        <div class="output output-2 row-div" id="zubat_evo">0</div>
+        <div class="output output-3 row-div" id="zubat_remp">0</div>
+        <div class="output output-4 row-div" id="zubat_remc">0</div>
+      </div>
+      <div>
+        <div class="label row-div">Venonat #:</div>
+        <input type="number" class="col1" id="venonat_num" value="0">
+        <div class="label row-div">Candies:</div>
+        <input type="number" class="col1" id="venonat_candies" value="0">
+        <div class="output output-1 row-div" id="venonat_transfer">0</div>
+        <div class="output output-2 row-div" id="venonat_evo">0</div>
+        <div class="output output-3 row-div" id="venonat_remp">0</div>
+        <div class="output output-4 row-div" id="venonat_remc">0</div>
+      </div>
+    </div>
+  </div>
   <script src="pokemon-go-evolution-new.js"></script>
-
 </body>
