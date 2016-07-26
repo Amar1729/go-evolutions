@@ -1,7 +1,8 @@
 /* CSS declarations go here */
 
 body {
-    background-color: #52a4ff;
+    background-color: #fff3cc;
+    font-family: sans-serif;
 }
 
 .label {
@@ -31,11 +32,19 @@ input {
 }
 
 .output {
-    background-color: lightgreen;
-    border-radius: 7px;
-    padding: 0 10px;
-    min-width: 70px;
+    background: lightgreen;
+    background: linear-gradient(to right, #a2db95, #24ccaa);
+    border-radius: 30px;
+    padding: 0px 10px 0px;
+    min-height: 34px;
+    min-width: 40px;
     text-align: center;
+    display: table-cell;
+    vertical-align:middle;
+    color: #f2f2f2;
+    border-style: solid;
+    border-width:thin;
+    border-color:gray;
 }
 
 .row-div {
@@ -44,6 +53,7 @@ input {
 
 .header {
     display: inline;
+    color: black;
 }
 
 #headers {
@@ -65,5 +75,5 @@ input {
 }
 
 .output-4 {
-    margin: 0 70px;
+    margin: 2 70px;
 }
